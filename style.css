@@ -12,7 +12,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('https://i.imgur.com/vwZ5pU0.jpeg') no-repeat center center/cover;
+  background: url('https://cdn.discordapp.com/attachments/1244574412376899614/1393182128304554025/biohazard.png?ex=68738ef7&is=68723d77&hm=261a002df94560349c93d931c95ea687ffacb4b13a757373f8eba2a0b7b114d6&') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
