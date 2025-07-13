@@ -95,6 +95,13 @@ body::before {
   border: 1px solid #b30000;
   border-radius: 10px;
   color: #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.faction-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
 
 .faction-card button {
@@ -186,6 +193,6 @@ body::before {
 .map-image {
   width: 90%;
   max-width: 800px;
-  border: 2px solid #24b300; /* Themed border */
+  border: 2px solid #2ab300; /* Themed border */
   border-radius: 10px; /* Rounded corners */
 }
