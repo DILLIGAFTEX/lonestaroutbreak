@@ -76,6 +76,23 @@ body::before {
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
 }
 
+/* Fade-in animation on page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to main content areas */
+.hero, .page-title, .factions-grid, .content-container, .map-container {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
 /* Faction Section */
 .faction-body, .page-title {
   padding: 2rem;
@@ -140,10 +157,40 @@ body::before {
   text-align: center;
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
   color: #e0e0e0;
+  max-width: 500px;
+  width: 90%;
 }
 
 .modal-content h2 {
   margin-top: 0;
+}
+
+.modal-faction-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #b30000;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.modal-perks {
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #8b0000;
+}
+
+.modal-perks h3 {
+  margin-top: 0;
+  color: #ff0000;
+}
+
+.modal-perks ul {
+  list-style-type: '✓  ';
+  padding-left: 1.5rem;
+  margin: 0;
 }
 
 .modal-content .btn {
