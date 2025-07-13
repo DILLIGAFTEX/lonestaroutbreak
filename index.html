@@ -4,10 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LoneStar Outbreak</title>
+
+  <!-- Link to your custom stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Optional sci-fi/military styled font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Optional Loading Screen -->
   <div id="loading-screen">
     <img src="loading-icon.png" alt="Loading..." />
     <div id="loading-text">Loading LoneStar Outbreak...</div>
@@ -26,15 +31,19 @@
     </div>
   </div>
 
+  <!-- Background Music -->
   <audio autoplay loop>
     <source src="background-music.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
   <script>
+    // Hide loading screen when everything is loaded
     window.addEventListener('load', () => {
       const loadingScreen = document.getElementById('loading-screen');
-      if (loadingScreen) loadingScreen.style.display = 'none';
+      if (loadingScreen) {
+        loadingScreen.style.display = 'none';
+      }
     });
   </script>
 </body>
