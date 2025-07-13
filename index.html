@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LoneStar Outbreak</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
   <div id="loading-screen">
@@ -15,24 +14,20 @@
       <source src="intro.mp3" type="audio/mpeg" />
     </audio>
   </div>
-
-  <!-- Hidden YouTube audio background -->
-<iframe
-  style="display: none;"
-  src="https://www.youtube.com/watch?v=7fQ32LJths8/embed/7fQ32LJths8?autoplay=1&loop=1&playlist=7fQ32LJths8&controls=0&showinfo=0&autohide=1&mute=0"
-  frameborder="0"
-  allow="autoplay"
-></iframe>
-
-
+  <iframe
+    style="display: none;"
+    src="https://www.youtube.com/embed/7fQ32LJths8?autoplay=1&loop=1&playlist=7fQ32LJths8&controls=0&showinfo=0&autohide=1&mute=0"
+    frameborder="0"
+    allow="autoplay"
+  ></iframe>
   <div class="hero">
     <div class="overlay"></div>
     <div class="content">
       <img src="1.png" alt="LoneStar Outbreak Logo" class="logo" />
       <p class="tagline">The infection spread... but hope didn’t.</p>
       <div class="buttons">
-        <a href="fivem://connect 172.111.51.207" class="btn">Join Server</a>
-        <a href="https://discord.gg/FD7j8Nc7yc" class="btn discord" target="_blank">Join Discord</a>
+        <a href="fivem://connect/YOUR-FIVEM-IP-HERE" class="btn">Join Server</a>
+        <a href="https://discord.gg/YOUR-DISCORD" class="btn discord" target="_blank">Join Discord</a>
         <a href="https://YOUR-TEBEX-STORE.tebex.io" class="btn store" target="_blank">Visit Store</a>
         <a href="factions.html" class="btn">View Factions</a>
         <a href="rules.html" class="btn">Rules</a>
@@ -41,31 +36,5 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function onYouTubeIframeAPIReady() {
-      new YT.Player('player', {
-        videoId: '7fQ32LJths8',
-        playerVars: {
-          autoplay: 1,
-          controls: 0,
-          showinfo: 0,
-          modestbranding: 1,
-          loop: 1,
-          mute: 1,
-          playlist: '7fQ32LJths8'
-        },
-        events: {
-          onReady: function (e) {
-            e.target.playVideo();
-          }
-        }
-      });
-    }
-
-    window.addEventListener("load", () => {
-      document.getElementById("loading-screen").style.display = "none";
-    });
-  </script>
 </body>
 </html>
