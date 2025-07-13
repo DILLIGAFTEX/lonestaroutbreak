@@ -21,10 +21,13 @@
   <!-- Confirmation Modal -->
   <div id="faction-modal" class="modal-overlay" style="display: none;">
     <div class="modal-content">
+      <img id="modal-faction-img" src="" alt="Faction Emblem" class="modal-faction-image">
       <h2>Confirm Choice</h2>
       <p>Are you sure you want to be a <span id="chosen-faction" class="title-accent"></span>?</p>
-      <button id="confirm-btn" class="btn">Confirm</button>
-      <button id="cancel-btn" class="btn">Cancel</button>
+      <div id="modal-perks-container" class="modal-perks">
+        <!-- Perks will be injected here by JS -->
+      </div>
+      <button id="confirm-btn" class="btn">Confirm</button><button id="cancel-btn" class="btn">Cancel</button>
     </div>
   </div>
 
