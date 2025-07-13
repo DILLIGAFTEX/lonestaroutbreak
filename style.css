@@ -55,21 +55,21 @@ body {
 .buttons .btn {
   margin: 5px;
   padding: 12px 24px;
-  background: #8b0000;
-  color: #e0e0e0;
-  border: 1px solid #b30000;
+  background: #9a8866;
+  color: #9a8866;
+  border: 1px solid #9a8866;
   text-decoration: none;
   display: inline-block;
   border-radius: 5px;
   font-weight: bold;
   transition: background 0.3s ease;
-  box-shadow: 0 0 6px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 6px rgba(154, 136, 102, 0.2);
 }
 
 .buttons .btn:hover {
-  background: #b30000;
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  background: #9a8866;
+  color: #9a8866;
+  box-shadow: 0 0 10px rgba(154, 136, 102, 0.4);
 }
 
 .video-background #player {
@@ -95,33 +95,33 @@ body {
 .faction-card {
   background: #2a2a2a;
   padding: 1rem;
-  border: 1px solid #b30000;
+  border: 1px solid #9a8866;
   border-radius: 10px;
-  color: #e0e0e0;
+  color: #9a8866;
 }
 
 .faction-card button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background: #8b0000;
-  color: white;
+  background: #9a8866;
+  color: #9a8866;
   border: none;
   border-radius: 5px;
   transition: background 0.3s;
 }
 
 .faction-card button:hover {
-  background: #b30000;
+  background: #9a8866;
 }
 
 .rules li, .lore-text {
   background: #2a2a2a;
   padding: 1rem;
-  border-left: 4px solid #8b0000;
+  border-left: 4px solid #9a8866;
   margin: 1rem auto;
   width: 90%;
   max-width: 600px;
-  color: #e0e0e0;
+  color: #9a8866;
 }
 
 .nav {
