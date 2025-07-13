@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LoneStar Outbreak | FiveM Apocalypse Server</title>
+  <title>LoneStar Outbreak</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
   <div id="loading-screen">
     <img src="1.png" alt="Loading Logo" />
     <div id="loading-text">LoneStar Outbreak is Loading...</div>
+    <audio id="intro-sound" autoplay>
+      <source src="intro.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <div class="video-background">
+    <div id="player"></div>
   </div>
 
   <div class="hero">
@@ -17,29 +25,42 @@
     <div class="content">
       <img src="1.png" alt="LoneStar Outbreak Logo" class="logo" />
       <p class="tagline">The infection spread... but hope didn’t.</p>
-
       <div class="buttons">
         <a href="fivem://connect 172.111.51.207" class="btn">Join Server</a>
         <a href="https://discord.gg/FD7j8Nc7yc" class="btn discord" target="_blank">Join Discord</a>
         <a href="https://YOUR-TEBEX-STORE.tebex.io" class="btn store" target="_blank">Visit Store</a>
         <a href="factions.html" class="btn">View Factions</a>
+        <a href="rules.html" class="btn">Rules</a>
+        <a href="map.html" class="btn">Map</a>
+        <a href="lore.html" class="btn">Lore</a>
       </div>
     </div>
   </div>
 
-  <section class="features">
-    <h2>Survive the Collapse</h2>
-    <ul>
-      <li>⚕️ Realistic Medical System</li>
-      <li>🔧 Crafting and Looting</li>
-      <li>🧠 Custom Factions & Perks</li>
-      <li>🧟 Dynamic Zombie AI</li>
-      <li>⚔️ PVE With PVP Zones</li>
-    </ul>
-  </section>
+  <script>
+    function onYouTubeIframeAPIReady() {
+      new YT.Player('player', {
+        videoId: '7fQ32LJths8',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          showinfo: 0,
+          modestbranding: 1,
+          loop: 1,
+          mute: 1,
+          playlist: '7fQ32LJths8'
+        },
+        events: {
+          onReady: function (e) {
+            e.target.playVideo();
+          }
+        }
+      });
+    }
 
-  <footer>
-    <p>&copy; 2025 LoneStar Outbreak. All rights reserved.</p>
-  </footer>
+    window.addEventListener("load", () => {
+      document.getElementById("loading-screen").style.display = "none";
+    });
+  </script>
 </body>
 </html>
