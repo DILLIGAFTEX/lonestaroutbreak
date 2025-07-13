@@ -1,6 +1,6 @@
 /* Background with full image */
 body {
-  background: url('background.jpg') no-repeat center center fixed;
+  background: url('background.png') no-repeat center center fixed;
   background-size: cover;
   color: #e0e0e0;
   font-family: 'Orbitron', sans-serif;
