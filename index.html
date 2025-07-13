@@ -2,53 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LoneStar Outbreak</title>
   <style>
-    body {
-      background: #000;
-      color: #eee;
-      font-family: sans-serif;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-    }
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .btn {
-      background: #222;
-      color: #eee;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      text-align: center;
-      width: 200px;
-    }
-    .btn:hover {
-      background: #444;
-    }
+    body { background: #000; color: #eee; font-family: sans-serif; margin: 0; }
+    #loading-screen { position: fixed; top:0; left:0; width:100%; height:100%; background:#000; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:9999; }
+    #loading-screen img { width: 100px; }
+    #loading-text { margin-top: 10px; font-size: 1.2rem; color: red; }
+    .hero { position: relative; z-index: 2; text-align:center; color:white; padding-top: 20vh; }
+    .overlay { background: rgba(0,0,0,0.6); position:absolute; top:0; left:0; right:0; bottom:0; z-index:1; }
+    .logo { width: 250px; border-radius: 10px; }
+    .buttons .btn { margin: 5px; padding: 10px 20px; background: red; color: white; border: none; text-decoration: none; display: inline-block; }
+    .video-background #player { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+    .faction-body, .page-title { padding: 2rem; text-align: center; }
+    .factions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding: 2rem; }
+    .faction-card { background: #111; padding: 1rem; border: 1px solid red; border-radius: 10px; }
+    .faction-card button { margin-top: 1rem; padding: 0.5rem 1rem; background: red; color: white; border: none; border-radius: 5px; }
+    .rules li, .lore-text { margin: 1rem auto; width: 90%; max-width: 600px; text-align: left; }
+    .nav { padding: 1rem; }
   </style>
 </head>
 <body>
-  <div class="buttons">
-    <a href="factions.html" class="btn">View Factions</a>
-    <a href="rules.html" class="btn">Rules</a>
-    <a href="map.html" class="btn">Map</a>
-    <a href="lore.html" class="btn">Lore</a>
-    <a href="fivem://connect/YOUR-FIVEM-IP-HERE" class="btn">Join Server</a>
-    <a href="https://discord.gg/YOUR_DISCORD" class="btn" target="_blank">Join Discord</a>
-    <a href="https://YOUR_TEBEX.tebex.io" class="btn" target="_blank">Visit Store</a>
+  <!-- Optional Loading Screen (hidden with JS on load) -->
+  <div id="loading-screen">
+    <img src="loading-icon.png" alt="Loading..." />
+    <div id="loading-text">Loading LoneStar Outbreak...</div>
   </div>
 
+  <div class="hero">
+    <h1>Welcome to LoneStar Outbreak</h1>
+    <div class="buttons">
+      <a href="factions.html" class="btn">View Factions</a>
+      <a href="rules.html" class="btn">Rules</a>
+      <a href="map.html" class="btn">Map</a>
+      <a href="lore.html" class="btn">Lore</a>
+      <a href="fivem://connect/YOUR-FIVEM-IP-HERE" class="btn">Join Server</a>
+      <a href="https://discord.gg/YOUR_DISCORD" class="btn" target="_blank">Join Discord</a>
+      <a href="https://YOUR_TEBEX.tebex.io" class="btn" target="_blank">Visit Store</a>
+    </div>
+  </div>
+
+  <!-- Background Music -->
   <audio autoplay loop>
     <source src="background-music.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
+
+  <script>
+    // Hide loading screen when page fully loaded
+    window.addEventListener('load', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      if (loadingScreen) {
+        loadingScreen.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
-
