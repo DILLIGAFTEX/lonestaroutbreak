@@ -17,12 +17,16 @@
     <div class="faction-card"><h2>🎒 Scavenger</h2><p>Find better loot and carry more.</p><button data-faction="Scavenger">Choose</button></div>
     <div class="faction-card"><h2>🎯 Hunter</h2><p>Track and deal more damage to infected.</p><button data-faction="Hunter">Choose</button></div>
   </div>
-  <script>
-    document.querySelectorAll('.faction-card button').forEach(button => {
-      button.addEventListener('click', () => {
-        const faction = button.dataset.faction;
-        alert("You chose: " + faction + "!");
-      });
-    });
-  </script>
+
+  <!-- Confirmation Modal -->
+  <div id="faction-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <h2>Confirm Choice</h2>
+      <p>Are you sure you want to be a <span id="chosen-faction" class="title-accent"></span>?</p>
+      <button id="confirm-btn" class="btn">Confirm</button>
+      <button id="cancel-btn" class="btn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="factions.js"></script>
 </body></html>
