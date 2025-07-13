@@ -111,15 +111,25 @@ body::before {
   background: #b30000;
 }
 
-/* Rules / Lore */
-.rules li, .lore-text {
+/* Content pages (Rules / Lore) */
+.content-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.content-box {
   background: #2a2a2a;
-  padding: 1rem;
-  border-left: 4px solid #8b0000;
-  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #b30000;
+  max-width: 800px;
   width: 90%;
-  max-width: 600px;
   color: #e0e0e0;
+}
+
+.content-box ul {
+  list-style-position: inside;
+  padding-left: 0;
 }
 
 .nav {
@@ -144,6 +154,6 @@ body::before {
 .map-image {
   width: 90%;
   max-width: 800px;
-  border: 2px solid #2ab300; /* Themed border */
+  border: 2px solid #21db08; /* Themed border */
   border-radius: 10px; /* Rounded corners */
 }
