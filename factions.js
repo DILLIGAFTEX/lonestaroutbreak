@@ -10,35 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const factionsData = {
     Medic: {
-      image: 'https://cdn.discordapp.com/attachments/1244574412376899614/1393923834146455685/medical.png?ex=6874f03b&is=68739ebb&hm=110c3e0040734400cb2dc684ccf6f5cf41e9156d5a8f280ebe7edc784196965e&',
+      image: 'https://r2.fivemanage.com/IISUtLV7264jjzzZ57p0E/medical.png',
       perks: [
         "Can revive downed allies faster.",
         "Crafts advanced medical supplies."
       ]
     },
     Engineer: {
-      image: 'https://cdn.discordapp.com/attachments/1244574412376899614/1393923804853571715/medical.png?ex=6874f034&is=68739eb4&hm=4308b2ede80633223c064c7b16c229827da22b94d323cb70954a1b0b5428d442&',
+      image: 'https://r2.fivemanage.com/IISUtLV7264jjzzZ57p0E/engineer.png',
       perks: [
         "Can repair vehicles and structures.",
         "Crafts defensive fortifications."
       ]
     },
     Recon: {
-      image: 'https://cdn.discordapp.com/attachments/1244574412376899614/1393923843633971200/recon.png?ex=6874f03e&is=68739ebe&hm=c6841dda060c42ab37afdbb7a19b4e740ffcafc228b4cee0240d4e5c48af7dba&',
+      image: 'https://r2.fivemanage.com/IISUtLV7264jjzzZ57p0E/recon.png',
       perks: [
         "Can spot and mark enemies for the team.",
         "Moves faster and more quietly."
       ]
     },
     Scavenger: {
-      image: 'https://cdn.discordapp.com/attachments/1244574412376899614/1393923853675266058/scavenger.png?ex=6874f040&is=68739ec0&hm=1239aa3210cd4ef9b315d955c4886f6f411bf89ffd0c42a9602e143903e5db06&',
+      image: 'https://r2.fivemanage.com/IISUtLV7264jjzzZ57p0E/scavenger.png',
       perks: [
         "Finds higher quality loot.",
         "Increased inventory capacity."
       ]
     },
     Hunter: {
-      image: 'https://cdn.discordapp.com/attachments/1244574412376899614/1393923815884722277/hunter.png?ex=6874f037&is=68739eb7&hm=871f4d91360c31d1b4427db4637520894ea2686cc5d44f57319dc2c6038acf6e&',
+      image: 'https://r2.fivemanage.com/IISUtLV7264jjzzZ57p0E/hunter.png',
       perks: [
         "Deals bonus damage to infected.",
         "Can track recent enemy movements."
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   confirmBtn.addEventListener('click', () => {
     // Here you could add logic to save the choice, e.g., to localStorage
     // or send it to a server. For now, we'll just show an alert.
-    alert(`Welcome to the ${selectedFaction} faction, Head on over to the server and experience the apocalypse!`);
+    alert(`Welcome to the ${selectedFaction} faction, Head on over to the server find the fox icon at the trader pick a faction and survive the apocalypse!`);
     modal.style.display = 'none';
   });
 });
